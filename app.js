@@ -6,33 +6,59 @@
 ; Description: JavaScript Trivia single page application.
 ;===========================================
 */
-var header = require('./header.js');
-console.log(header.display('Team Commit to Master', 'EMS project'));
-console.log('');
+// Rank functions
+function openRank1() {
+    document.getElementById('rank-container').style.display = "block";
+    document.getElementById('home-container').style.display = "none";
+    document.getElementById('quiz-container').style.display = "none";
+    document.getElementById('bio-container').style.display = "none";
+};
 
-// start program
-// require statements
-var express = require("express");
-var http = require("http");
+function openRank2() {
+    document.getElementById('rank-container').style.display = "block";
+    document.getElementById('quiz-container').style.display = "none";
+};
 
+// Bio functions
+function openBio() {
+    document.getElementById('bio-container').style.display = "block";
+    document.getElementById('home-container').style.display = "none";
+    document.getElementById('quiz-container').style.display = "none";
+    document.getElementById('rank-container').style.display = "none";
+};
 
-// assignments
-var app = express();
+// Home functions
+function openHome() {
+    document.getElementById('home-container').style.display = "block";
+    document.getElementById('rank-container').style.display = "none";
+    document.getElementById('quiz-container').style.display = "none";
+    document.getElementById('bio-container').style.display = "none";
+};
+// Quiz functions
+function openQuiz() {
+    document.getElementById('quiz-container').style.display = "block";
+    document.getElementById('home-container').style.display = "none";
+    document.getElementById('rank-container').style.display = "none";
+    document.getElementById('bio-container').style.display = "none";
+};
 
-// instructs express to look inside views folder for any files.
-app.set("views", path.resolve(__dirname, "views"));
-app.set("view engine", "ejs");
-app.use(logger("short"));
+function startQuiz() {
+    document.getElementById('q1').style.display = "block";
+    document.getElementById('start-quiz').style.display = "none";
+};
 
-// route
-app.get("/", function(request, response) {
-  response.render("index", {
-    title: "Home page"
-  });
-});
+function nextQuest1() {
+       document.getElementById('q2').style.display = "block";
+       document.getElementById('q1').style.display = "none";
+};
 
-// create node server
-http.createServer(app).listen(8080, function() {
-  console.log("Application started and listening on port 8080");
-});
-// end program
+function nextQuest2() {
+       document.getElementById('q3').style.display = "block";
+       document.getElementById('q2').style.display = "none";
+};
+
+function preQuest1() {
+       document.getElementById('q1').style.display = "block";
+       document.getElementById('q2').style.display = "none";
+};
+

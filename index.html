@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <title>JavaScript Trivia</title>
+        <link data-require="bootstrap@4.1.3" data-semver="4.1.3" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+        <script data-require="bootstrap@4.1.3" data-semver="4.1.3" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+      </head>
+
+  <body>
+
+    <h1 class="text-center">JavaScript Trivia</h1>
+
+    <div class="navigation">
+        <div id="quiz" onclick="openQuiz()">
+            <img src="images/quiz-icon.png" class="nav-icon" id="quiz-icon">
+        </div>  
+        
+        <div id="rank" onlick="openRank1()">
+            <img src="images/rank-icon.png" class="nav-icon" id="rank-icon">
+        </div>  
+        
+        <div id="bio" onlick="openBio()">
+            <img src="images/bio-icon.png" class="nav-icon" id="bio-icon">
+        </div>  
+        
+        <div id="home" onlick="openHome()">
+            <img src="images/home-icon.png" class="nav-icon" id="home-icon">
+        </div> 
+    
+    </div> <!-- End Navigation -->
+      
+  <div class="main-container" role="main">
+    
+    <div id="home-container">
+      <img src="images/computer-graphic.png" id="home-graphic">  
+    </div>
+      
+    <div id="quiz-container">
+
+      <div id="start-quiz">
+        <h2>Test Your Knowledge of JavaScript</h2>
+
+          <div class="form-group">
+            <label for="UserName"></label>
+            <input type="text" class="form-control quiz-box" id="UserName" placeholder="Name">
+            <br>
+            <button type="submit" class="btn" id="start-btn" onClick="startQuiz()">START</button>
+          </div>
+
+      </div> <!-- End start quiz -->
+          
+        <div class="question" id="q1">
+          <h2>Question #1</h2>
+          <p>What does ES5 stand for?</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans1" id="ans1_1" value="A">
+            <label class="form-check-label" for="ans1_1">a.	ECMAScript 5</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans1" id="ans1_2" value="B">
+            <label class="form-check-label" for="ans1_2">b. ECMAScript 2009</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans1" id="ans1_3" value="C">
+            <label class="form-check-label" for="ans1_3">c.	Both A and B</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans1" id="ans1_4" value="D">
+            <label class="form-check-label" for="ans1_4">d. None of the above.</label>
+          </div>
+          <br>
+          <button  type="submit" class="btn next-btn" id="quest1Nxt" onClick="nextQuest1()">Next</button>
+       </div> <!-- End question 1 -->
+
+    <div class="question" id="q2">
+        <h2>Question #2</h2>
+        <p>Which is the proper statement to return “Hello World” text to the console.</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans2" id="ans2_1" value="A">
+            <label class="form-check-label" for="ans2_1">a. return Hello World</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans2" id="ans2_2" value="B">
+            <label class="form-check-label" for="ans2_2">b.	Log(“Hello World”);</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans2" id="ans2_3" value="C">
+            <label class="form-check-label" for="ans2_3">c.	console.log("Hello World");</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans2" id="ans2_4" value="D">
+            <label class="form-check-label" for="ans2_4">d.	function(Hello World){}</label>
+        </div>
+        <br>
+        <button class="btn pre-btn" onclick="preQuest1()">Previous</button>
+        <button class="btn next-btn" onclick="nextQuest2()">Next</button>
+    </div> <!-- End question 2 -->
+
+
+    <div class="question" id="q3">
+        <h3>Question #3</h3>
+        <p>What method calls a function once for each array element?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans3" id="ans3_1" value="A">
+            <label class="form-check-label" for="ans3_1">a.	instanceOf()</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans3" id="ans3_2" value="B">
+            <label class="form-check-label" for="ans3_2">b.	forEach()</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans3" id="ans3_3" value="C">
+            <label class="form-check-label" for="ans3_3">c.	indexOf()</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans3" id="ans3_4" value="D">
+            <label class="form-check-label" for="ans3_4">d. None of the above.</label>
+        </div>
+        <br>
+        <a href="#q2" class="badge badge-light float-left">Previous</a>
+        <a href="#q4" class="badge badge-light float-right">Next</a>
+    </div> <!-- End question 3 -->
+
+
+
+    <div class="question" id="q4">
+        <h3>Question #4</h3>
+        <p>Which built-in method returns the length of the string?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans4" id="ans4_1" value="A">
+            <label class="form-check-label" for="ans4_1">a.	length()</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans4" id="ans4_2" value="B">
+            <label class="form-check-label" for="ans4_2">b.	size()</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans4" id="ans4_3" value="C">
+            <label class="form-check-label" for="ans4_3">c.	index()</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans4" id="ans4_4" value="D">
+            <label class="form-check-label" for="ans4_4">d.	indexOf()</label>
+        </div>
+        <br>
+        <a href="#q3" class="badge badge-light float-left">Previous</a>
+        <a href="#q5" class="badge badge-light float-right">Next</a>
+    </div> <!-- End question 4 -->
+
+
+
+    <div class="question" id="q5">
+        <h3>Question #5</h3>
+        <p>Which is NOT a valid way to create a JavaScript object?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans5" id="ans5_1" value="A">
+            <label class="form-check-label" for="ans5_1">a.	const example =  x;</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans5" id="ans5_2" value="B">
+            <label class="form-check-label" for="ans5_2">b.	var x = new Object();</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans5" id="ans5_3" value="C">
+            <label class="form-check-label" for="ans5_3">c.	var empty = {}</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans5" id="ans5_4" value="D">
+            <label class="form-check-label" for="ans5_4">d.	Object.create()</label>
+        </div>
+        <br>
+        <a href="#q4" class="badge badge-light float-left">Previous</a>
+        <a href="#q6" class="badge badge-light float-right">Next</a>
+    </div> <!-- End question 5 -->
+
+
+
+    <div class="question" id="q6">
+        <h3>Question #6</h3>
+        <p>“Public” and “Private” are the two most common keywords in JavaScript syntax to declare accessibility to an object.</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans6" id="ans6_1" value="T">
+            <label class="form-check-label" for="ans6_1">True</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans6" id="ans6_2" value="F">
+            <label class="form-check-label" for="ans6_2">False</label>
+        </div>
+        <br>
+        <a href="#q5" class="badge badge-light float-left">Previous</a>
+        <a href="#q7" class="badge badge-light float-right">Next</a>
+    </div> <!-- End question 6 -->
+
+
+
+    <div class="question" id="q7">
+        <h3>Question #7</h3>
+        <p>Which of the options is the correct way to create an empty array in JavaScript?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans7" id="ans7_1" value="A">
+            <label class="form-check-label" for="ans7_1">a.	var arr = [empty];</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans7" id="ans7_2" value="B">
+            <label class="form-check-label" for="ans7_2">b.	var empty = [];</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans7" id="ans7_3" value="C">
+            <label class="form-check-label" for="ans7_3">c.	var empty = {};</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans7" id="ans7_4" value="D">
+            <label class="form-check-label" for="ans7_4">d.	var arr = a[0];</label>
+        </div>
+        <br>
+        <a href="#q6" class="badge badge-light float-left">Previous</a>
+        <a href="#q8" class="badge badge-light float-right">Next</a>
+    </div> <!-- End question 7 -->
+
+
+    <div class="question" id="q8">
+        <h3>Question #8</h3>
+        <p>______ JavaScript enables the manipulation of web pages and client browsers.</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans8" id="ans8_1" value="A">
+            <label class="form-check-label" for="ans8_1">a.	Back-End</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans8" id="ans8_2" value="B">
+            <label class="form-check-label" for="ans8_2">b.	Core</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans8" id="ans8_3" value="C">
+            <label class="form-check-label" for="ans8_3">c.	Server-Side</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans8" id="ans8_4" value="D">
+            <label class="form-check-label" for="ans8_4">d. Client-Side</label>
+        </div>
+        <br>
+        <a href="#q7" class="badge badge-light float-left">Previous</a>
+        <a href="#q9" class="badge badge-light float-right">Next</a>
+    </div> <!-- End question 8 -->
+
+
+
+    <div class="question" id="q9">
+        <h3>Question #9</h3>
+        <p>What is the proper escape sequence in JavaScript string literals?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans9" id="ans9_1" value="A">
+            <label class="form-check-label" for="ans9_1">a. /</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans9" id="ans9_2" value="B">
+            <label class="form-check-label" for="ans9_2">b.	esc.</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans9" id="ans9_3" value="C">
+            <label class="form-check-label" for="ans9_3">c.	\</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans9" id="ans9_4" value="D">
+            <label class="form-check-label" for="ans9_4">d. *</label>
+        </div>
+        <br>
+        <a href="#q8" class="badge badge-light float-left">Previous</a>
+        <a href="#q10" class="badge badge-light float-right">Next</a>
+    </div> <!-- End question 9 -->
+
+
+
+    <div class="question" id="q10">
+        <h3>Question #10</h3>
+        <p>A Boolean value represents truth or falsehood, on or off, yes or no.</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans10" id="ans10_1" value="T">
+            <label class="form-check-label" for="ans10_1">True</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="ans10" id="ans10_2" value="F">
+            <label class="form-check-label" for="ans10_2">False</label>
+        </div>
+        <br>
+        <a href="#q9" class="badge badge-light float-left">Previous</a>
+        <button type="submit" class="btn btn-success float-right">Submit</button>
+    </div> <!-- End question 10 -->
+        
+
+    <div class="score-container" id="Answers">
+        
+    <div class="container" id="Score">
+        <h2>Score</h2>
+    </div>
+      <h3 id="rank" onclick="openRank2()">You ranked:<strong id="ranking"></strong></h3>
+    
+    <div id="answer-box">
+      <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Correct Answer</th>
+              <th scope="col">Your Answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>c</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>c</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>b</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>a</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>a</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>b</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>b</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>d</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>c</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td>a</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+    </div><!-- End Score Container -->
+        
+    </div> <!-- End Quiz Container -->
+
+
+    <div id="rank-container" id="Rank">
+        <h3>Your Rank is:</h3>
+        <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col"># Correct</th>
+                <th scope="col">Rank</th>
+                <th scope="col">Your Rank</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">8-10</th>
+                <td>Expert</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">6-8</th>
+                <td>Novice</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">less than 6</th>
+                <td>Beginner</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </div> <!-- End rank container -->
+
+    <div id="bio-container">
+    
+    </div>
+
+    
+
+  </div>
+
+  </body>
+</html>
