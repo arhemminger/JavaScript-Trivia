@@ -72,13 +72,15 @@ h3 {
     display: none;
 }
 
-#quiz-container, rank-container, bio-container {
+#quiz-container, #rank-container, #bio-container {
     width: 60%;
-    margin: 50px auto;
     background-color: #fff;
     padding: 50px;
     border-radius: 15px;
     height: 500px;
+    position: fixed;
+    top: 20%;
+    left: 20%;
 }
 
 .quiz-box {
@@ -132,7 +134,7 @@ h3 {
   color: #FF7062;
 }
 
-#answer-box {
+#answer-box, #rank-box{
   width: 80%;
   height: 300px;
   margin: 10px auto;
@@ -142,3 +144,53 @@ h3 {
   padding: 20px;
 }
 
+#bio-container {
+    width: 80%;
+    height: auto;
+    padding: 25px 50px;
+    left: 10%;
+}
+
+#bio-container h3 {
+    color: #02C6EC;
+}
+
+#image-container {
+  margin: auto;
+  display: block;
+  width: 400px;
+}
+.bio-image {
+    display: inline-block;
+}
+
+.bio-image img {
+    width: 125px;
+}
+
+.bio-image img:hover {
+    width: 130px;
+}
+
+#andrewBio, #jordanBio, #gabrielBio {
+    display: none;
+}
+
+.indBioImg {
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+
+.social-container {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.social-container a {
+    color: #FF7062;
+    font-size: 28px;
+    margin: 0 20px;
+    text-align: center;
+}
