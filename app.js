@@ -15,7 +15,6 @@ function openRank() {
     document.getElementById('title').style.display = "none";
 };
 
-
 // Bio functions
 function openBio() {
     document.getElementById('bio-container').style.display = "block";

@@ -25,7 +25,6 @@ h3 {
   text-align: center;
 }
 
-
 .nav-icon {
     width: 100px;
     position: fixed;
@@ -52,8 +51,12 @@ h3 {
     left: 0;
 }
 
+#quiz-icon:hover, #rank-icon:hover, #bio-icon:hover, #home-icon:hover {
+  cursor: pointer;
+}
+
 #quiz-container {
-  display: none;   
+  display: none;
 }
 
 #rank-container {
@@ -171,6 +174,7 @@ h3 {
 
 .bio-image img:hover {
     width: 130px;
+    cursor: pointer;
 }
 
 #andrewBio, #jordanBio, #gabrielBio {
