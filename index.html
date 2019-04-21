@@ -48,7 +48,7 @@
 
           <div class="form-group">
             <label for="UserName"></label>
-            <input type="text" class="form-control quiz-box" id="UserName" placeholder="Name">
+            <input type="text" class="form-control quiz-box" id="UserName" placeholder="Enter your name..">
             <br>
             <button type="submit" class="btn" id="start-btn" onClick="startQuiz()">START</button>
           </div>
@@ -147,7 +147,7 @@
         </div>
         <br>
         <button class="btn pre-btn" onclick="preQuest3()">Previous</button>
-        <butoon class="btn next-btn" onclick="nextQuest4()">Next</button>
+        <button class="btn next-btn" onclick="nextQuest4()">Next</button>
     </div> <!-- End question 4 -->
 
     <div class="question" id="q5">
@@ -185,7 +185,7 @@
             <input class="form-check-input" type="radio" name="ans6" id="ans6_2" value="F">
             <label class="form-check-label" for="ans6_2">False</label>
         </div>
-        <br>
+        <br><br><br><br>
         <button class="btn pre-btn" onclick="preQuest5()">Previous</button>
         <button class="btn next-btn" onclick="nextQuest6()">Next</button>
     </div> <!-- End question 6 -->
@@ -273,7 +273,7 @@
             <input class="form-check-input" type="radio" name="ans10" id="ans10_2" value="F">
             <label class="form-check-label" for="ans10_2">False</label>
         </div>
-        <br>
+        <br><br><br><br>
         <button class="btn pre-btn" onclick="preQuest9()">Previous</a>
         <button type="submit" class="btn btn-success float-right" onclick="openRank()">Submit</button>
     </div> <!-- End question 10 -->
@@ -353,15 +353,16 @@
     </div> <!-- End Quiz Container -->
 
     <div id="rank-container" id="Rank">
-        <h2>Rank</h2>
+        <h2>Rank / Score</h2>
 
         <div id="rank-box">
         <table class="table table-sm">
             <thead>
               <tr>
-                <th scope="col">Rank</th>
-                <th scope="col">Name</th>
-                <th scope="col">Score</th>
+                <th scope="col">Number</th>
+                <th scope="col">Question</th>
+                <th scope="col">Correct Answer</th>
+                <th scope="col">Your Answer</th>
               </tr>
             </thead>
             <tbody>
