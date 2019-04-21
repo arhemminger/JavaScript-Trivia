@@ -278,15 +278,28 @@
             />b. False
         </div>
         <br><br><br><br>
-        <button class="btn pre-btn" onclick="preQuest9()">Previous</a>
+        <button class="btn pre-btn" onclick="preQuest9()">Previous</button>
         <button type="submit" class="btn btn-success float-right" onclick="openRank()">Submit</button>
     </div> <!-- End question 10 -->
 
     </div> <!-- End Quiz Container -->
 
-    <div id="rank-container" id="Rank">
-        <h2>Rank / Score</h2>
-        <h4 id="person"></h4>
+    <div id="rank-container">
+        <h2>Rank</h2>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                  <h4 id="person"></h4>
+              </div>
+              <div class="col-sm">
+                  <h4 id="scoreDisplay"></h4>
+              </div>
+              <div class="col-sm">
+                  <h4 id="rankDisplay"></h4>
+              </div>
+            </div>
+          </div>
+        
         <div id="rank-box">
         <table class="table table-sm">
             <thead>

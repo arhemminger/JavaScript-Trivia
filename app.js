@@ -6,15 +6,6 @@
 ; Description: JavaScript Trivia single page application.
 ;===========================================
 */
-// Rank functions
-function openRank() {
-    document.getElementById('rank-container').style.display = "block";
-    document.getElementById('home-container').style.display = "none";
-    document.getElementById('quiz-container').style.display = "none";
-    document.getElementById('bio-container').style.display = "none";
-    document.getElementById('title').style.display = "none";
-};
-
 // Bio functions
 function openBio() {
     document.getElementById('bio-container').style.display = "block";
@@ -176,3 +167,71 @@ function nextQuest10() {
     document.getElementById('q10').style.display = "block";
     document.getElementById('Answers').style.display = "none";
 };
+
+/*
+function myRank() {
+    var score = 0;
+    if (score < 6) {
+        document.getElementById('rankDisplay').innerHTML = "Rank: Beginner";  //(Less than 6 correct answers)
+    }
+    if (score >= 6 && <= 8) {
+        document.getElementById('rankDisplay').innerHTML = "Rank: Novice";  //(6-8 correct answers)
+    }
+    if (score > 8) {
+        document.getElementById('rankDisplay').innerHTML = "Rank: Expert";  //(8-10 correct answers)
+    }
+    else {}
+};
+function myRank() {
+    //var score = 0;
+    var score = this.checkAnswer1();
+    document.getElementById('rankDisplay').innerHTML = "Rank: " + score;
+};
+*/
+// Rank functions
+function openRank() {
+    document.getElementById('rank-container').style.display = "block";
+    document.getElementById('home-container').style.display = "none";
+    document.getElementById('quiz-container').style.display = "none";
+    document.getElementById('bio-container').style.display = "none";
+    document.getElementById('title').style.display = "none";
+    // Score function
+    function myScore() {
+    var total = 0;
+    if (this.checkAnswer1() == "c") {
+        var total = total + 1;
+    }
+    if (this.checkAnswer2() == "c") {
+        var total = total + 1;
+    }
+    if (this.checkAnswer3() == "b") {
+        var total = total + 1;
+    }
+    if (this.checkAnswer4() == "a") {
+        var total = total + 1;
+    }
+    if (this.checkAnswer5() == "a") {
+        var total = total + 1;
+    }
+    if (this.checkAnswer6() == "b") {
+        var total = total + 1;
+    }
+    if (this.checkAnswer7() == "b") {
+        var total = total + 1;
+    }
+    if (this.checkAnswer8() == "d") {
+        var total = total + 1;
+    }
+    if (this.checkAnswer9() == "c") {
+        var total = total + 1;
+    }
+    if (this.checkAnswer10() == "a") {
+        var total = total + 1; 
+    }
+    var total = total * 10;
+    document.getElementById('scoreDisplay').innerHTML = "Score: " + total + "%";
+    };
+    myScore();
+    myRank();
+};
+
