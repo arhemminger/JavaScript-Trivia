@@ -7,6 +7,10 @@
         <link data-require="bootstrap@4.1.3" data-semver="4.1.3" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
         <script data-require="bootstrap@4.1.3" data-semver="4.1.3" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="style.css" />
+        
+        <script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js"
+         type = "text/javascript"></script>
+
         <script src="app.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -59,20 +63,20 @@
           <h2>Question #1</h2>
           <p>What does ES5 stand for?</p>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans1" id="ans1_1" value="a">
-            <label class="form-check-label" for="ans1_1">a.	ECMAScript 5</label>
+            <input class="form-check-input" type="radio" name="ans1" id="ans1_1" value="a" data-bind = "checked: checkAnswer1"
+            />a. ECMAScript 5
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans1" id="ans1_2" value="b">
-            <label class="form-check-label" for="ans1_2">b. ECMAScript 2009</label>
+            <input class="form-check-input" type="radio" name="ans1" id="ans1_2" value="b" data-bind = "checked: checkAnswer1" 
+            />b. ECMAScript 2009
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans1" id="ans1_3" value="c">
-            <label class="form-check-label" for="ans1_3">c.	Both A and B</label>
+            <input class="form-check-input" type="radio" name="ans1" id="ans1_3" value="c" data-bind = "checked: checkAnswer1"
+            />c.	Both A and B
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans1" id="ans1_4" value="d">
-            <label class="form-check-label" for="ans1_4">d. None of the above</label>
+            <input class="form-check-input" type="radio" name="ans1" id="ans1_4" value="d" data-bind = "checked: checkAnswer1"
+            />d. None of the above
           </div>
           <br>
           <button  type="submit" class="btn next-btn" id="quest1Nxt" onClick="nextQuest1()">Next</button>
@@ -82,20 +86,20 @@
         <h2>Question #2</h2>
         <p>Which is the proper statement to return “Hello World” text to the console.</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans2" id="ans2_1" value="a">
-            <label class="form-check-label" for="ans2_1">a. return Hello World</label>
+            <input class="form-check-input" type="radio" name="ans2" id="ans2_1" value="a" data-bind = "checked: checkAnswer2"
+            />a. return Hello World
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans2" id="ans2_2" value="b">
-            <label class="form-check-label" for="ans2_2">b.	Log(“Hello World”);</label>
+            <input class="form-check-input" type="radio" name="ans2" id="ans2_2" value="b" data-bind = "checked: checkAnswer2"
+            />b.	Log(“Hello World”);
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans2" id="ans2_3" value="c">
-            <label class="form-check-label" for="ans2_3">c.	console.log("Hello World");</label>
+            <input class="form-check-input" type="radio" name="ans2" id="ans2_3" value="c" data-bind = "checked: checkAnswer2"
+            />c.	console.log("Hello World");
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans2" id="ans2_4" value="d">
-            <label class="form-check-label" for="ans2_4">d.	function(Hello World){}</label>
+            <input class="form-check-input" type="radio" name="ans2" id="ans2_4" value="d" data-bind = "checked: checkAnswer2"
+            />d.	function(Hello World){}
         </div>
         <br>
         <button class="btn pre-btn" onclick="preQuest1()">Previous</button>
@@ -106,20 +110,20 @@
         <h2>Question #3</h2>
         <p>What method calls a function once for each array element?</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans3" id="ans3_1" value="a">
-            <label class="form-check-label" for="ans3_1">a.	instanceOf()</label>
+            <input class="form-check-input" type="radio" name="ans3" id="ans3_1" value="a" data-bind = "checked: checkAnswer3"
+            />a.	instanceOf()
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans3" id="ans3_2" value="b">
-            <label class="form-check-label" for="ans3_2">b.	forEach()</label>
+            <input class="form-check-input" type="radio" name="ans3" id="ans3_2" value="b" data-bind = "checked: checkAnswer3"
+            />b.	forEach()
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans3" id="ans3_3" value="c">
-            <label class="form-check-label" for="ans3_3">c.	indexOf()</label>
+            <input class="form-check-input" type="radio" name="ans3" id="ans3_3" value="c" data-bind = "checked: checkAnswer3"
+            />c.	indexOf()
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans3" id="ans3_4" value="d">
-            <label class="form-check-label" for="ans3_4">d. None of the above</label>
+            <input class="form-check-input" type="radio" name="ans3" id="ans3_4" value="d" data-bind = "checked: checkAnswer3"
+            />d. None of the above
         </div>
         <br>
         <button class="btn pre-btn" onclick="preQuest2()">Previous</button>
@@ -130,20 +134,20 @@
         <h2>Question #4</h2>
         <p>Which built-in method returns the length of the string?</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans4" id="ans4_1" value="a">
-            <label class="form-check-label" for="ans4_1">a.	length()</label>
+            <input class="form-check-input" type="radio" name="ans4" id="ans4_1" value="a" data-bind = "checked: checkAnswer4"
+            />a.	length()
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans4" id="ans4_2" value="b">
-            <label class="form-check-label" for="ans4_2">b.	size()</label>
+            <input class="form-check-input" type="radio" name="ans4" id="ans4_2" value="b" data-bind = "checked: checkAnswer4"
+            />b.	size()
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans4" id="ans4_3" value="c">
-            <label class="form-check-label" for="ans4_3">c.	index()</label>
+            <input class="form-check-input" type="radio" name="ans4" id="ans4_3" value="c" data-bind = "checked: checkAnswer4"
+            />c.	index()
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans4" id="ans4_4" value="d">
-            <label class="form-check-label" for="ans4_4">d.	indexOf()</label>
+            <input class="form-check-input" type="radio" name="ans4" id="ans4_4" value="d" data-bind = "checked: checkAnswer4"
+            />d.	indexOf()
         </div>
         <br>
         <button class="btn pre-btn" onclick="preQuest3()">Previous</button>
@@ -154,20 +158,20 @@
         <h2>Question #5</h2>
         <p>Which is NOT a valid way to create a JavaScript object?</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans5" id="ans5_1" value="a">
-            <label class="form-check-label" for="ans5_1">a.	const example =  x;</label>
+            <input class="form-check-input" type="radio" name="ans5" id="ans5_1" value="a" data-bind = "checked: checkAnswer5"
+            />a.	const example =  x;
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans5" id="ans5_2" value="b">
-            <label class="form-check-label" for="ans5_2">b.	var x = new Object();</label>
+            <input class="form-check-input" type="radio" name="ans5" id="ans5_2" value="b" data-bind = "checked: checkAnswer5"
+            />b.	var x = new Object();
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans5" id="ans5_3" value="c">
-            <label class="form-check-label" for="ans5_3">c.	var empty = {}</label>
+            <input class="form-check-input" type="radio" name="ans5" id="ans5_3" value="c" data-bind = "checked: checkAnswer5"
+            />c.	var empty = {}
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans5" id="ans5_4" value="d">
-            <label class="form-check-label" for="ans5_4">d.	Object.create()</label>
+            <input class="form-check-input" type="radio" name="ans5" id="ans5_4" value="d" data-bind = "checked: checkAnswer5"
+            />d.	Object.create()
         </div>
         <br>
         <button class="btn pre-btn" onclick="preQuest4()">Previous</button>
@@ -178,12 +182,12 @@
         <h2>Question #6</h2>
         <p>“Public” and “Private” are the two most common keywords in JavaScript syntax to declare accessibility to an object.</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans6" id="ans6_1" value="T">
-            <label class="form-check-label" for="ans6_1">a. True</label>
+            <input class="form-check-input" type="radio" name="ans6" id="ans6_1" value="a" data-bind = "checked: checkAnswer6"
+            />a. True
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans6" id="ans6_2" value="F">
-            <label class="form-check-label" for="ans6_2">b. False</label>
+            <input class="form-check-input" type="radio" name="ans6" id="ans6_2" value="b" data-bind = "checked: checkAnswer6"
+            />b. False
         </div>
         <br><br><br><br>
         <button class="btn pre-btn" onclick="preQuest5()">Previous</button>
@@ -194,20 +198,20 @@
         <h2>Question #7</h2>
         <p>Which of the options is the correct way to create an empty array in JavaScript?</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans7" id="ans7_1" value="a">
-            <label class="form-check-label" for="ans7_1">a.	var arr = [empty];</label>
+            <input class="form-check-input" type="radio" name="ans7" id="ans7_1" value="a" data-bind = "checked: checkAnswer7"
+            />a.	var arr = [empty];
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans7" id="ans7_2" value="b">
-            <label class="form-check-label" for="ans7_2">b.	var empty = [];</label>
+            <input class="form-check-input" type="radio" name="ans7" id="ans7_2" value="b" data-bind = "checked: checkAnswer7"
+            />b.	var empty = [];
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans7" id="ans7_3" value="c">
-            <label class="form-check-label" for="ans7_3">c.	var empty = {};</label>
+            <input class="form-check-input" type="radio" name="ans7" id="ans7_3" value="c" data-bind = "checked: checkAnswer7"
+            />c.	var empty = {};
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans7" id="ans7_4" value="d">
-            <label class="form-check-label" for="ans7_4">d.	var arr = a[0];</label>
+            <input class="form-check-input" type="radio" name="ans7" id="ans7_4" value="d" data-bind = "checked: checkAnswer7"
+            />d.	var arr = a[0];
         </div>
         <br>
         <button class="btn pre-btn" onclick="preQuest6()">Previous</button>
@@ -218,20 +222,20 @@
         <h2>Question #8</h2>
         <p>______ JavaScript enables the manipulation of web pages and client browsers.</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans8" id="ans8_1" value="a">
-            <label class="form-check-label" for="ans8_1">a.	Back-End</label>
+            <input class="form-check-input" type="radio" name="ans8" id="ans8_1" value="a" data-bind = "checked: checkAnswer8"
+            />a.	Back-End
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans8" id="ans8_2" value="b">
-            <label class="form-check-label" for="ans8_2">b.	Core</label>
+            <input class="form-check-input" type="radio" name="ans8" id="ans8_2" value="b" data-bind = "checked: checkAnswer8"
+            />b.	Core
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans8" id="ans8_3" value="c">
-            <label class="form-check-label" for="ans8_3">c.	Server-Side</label>
+            <input class="form-check-input" type="radio" name="ans8" id="ans8_3" value="c" data-bind = "checked: checkAnswer8"
+            />c.	Server-Side
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans8" id="ans8_4" value="d">
-            <label class="form-check-label" for="ans8_4">d. Client-Side</label>
+            <input class="form-check-input" type="radio" name="ans8" id="ans8_4" value="d" data-bind = "checked: checkAnswer8"
+            />d. Client-Side
         </div>
         <br>
         <button class="btn pre-btn" onclick="preQuest7()">Previous</button>
@@ -242,20 +246,20 @@
         <h2>Question #9</h2>
         <p>What is the proper escape sequence in JavaScript string literals?</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans9" id="ans9_1" value="a">
-            <label class="form-check-label" for="ans9_1">a. /</label>
+            <input class="form-check-input" type="radio" name="ans9" id="ans9_1" value="a" data-bind = "checked: checkAnswer9"
+            />a. /
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans9" id="ans9_2" value="b">
-            <label class="form-check-label" for="ans9_2">b.	esc.</label>
+            <input class="form-check-input" type="radio" name="ans9" id="ans9_2" value="b" data-bind = "checked: checkAnswer9"
+            />b.	esc.
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans9" id="ans9_3" value="c">
-            <label class="form-check-label" for="ans9_3">c.	\</label>
+            <input class="form-check-input" type="radio" name="ans9" id="ans9_3" value="c" data-bind = "checked: checkAnswer9"
+            />c.	\
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans9" id="ans9_4" value="d">
-            <label class="form-check-label" for="ans9_4">d. *</label>
+            <input class="form-check-input" type="radio" name="ans9" id="ans9_4" value="d" data-bind = "checked: checkAnswer9"
+            />d. *
         </div>
         <br>
         <button class="btn pre-btn" onclick="preQuest8()">Previous</button>
@@ -266,27 +270,17 @@
         <h2>Question #10</h2>
         <p>A Boolean value represents truth or falsehood, on or off, yes or no.</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans10" id="ans10_1" value="a">
-            <label class="form-check-label" for="ans10_1">a. True</label>
+            <input class="form-check-input" type="radio" name="ans10" id="ans10_1" value="a" data-bind = "checked: checkAnswer10"
+            />a. True
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="ans10" id="ans10_2" value="b">
-            <label class="form-check-label" for="ans10_2">b. False</label>
+            <input class="form-check-input" type="radio" name="ans10" id="ans10_2" value="b" data-bind = "checked: checkAnswer10"
+            />b. False
         </div>
         <br><br><br><br>
         <button class="btn pre-btn" onclick="preQuest9()">Previous</a>
         <button type="submit" class="btn btn-success float-right" onclick="openRank()">Submit</button>
     </div> <!-- End question 10 -->
-
-    <div class="score-container" id="Answers">
-
-    <div class="container" id="Score">
-        <h2>Score</h2>
-    </div>
-      <h3 id="rank" onclick="openRank()">You ranked:<strong id="ranking"></strong></h3>
-
-  
-    </div><!-- End Score Container -->
 
     </div> <!-- End Quiz Container -->
 
@@ -315,7 +309,7 @@
                     </p>
                   </td>
                   <td>c</td>
-                  <td></td>
+                  <td><span data-bind = "text:checkAnswer1"></span></td>
                 </tr>
                 <tr>
                   <th scope="row">2.</th>
@@ -328,7 +322,7 @@
                     </p>
                   </td>
                   <td>c</td>
-                  <td></td>
+                  <td><span data-bind = "text:checkAnswer2"></span></td>
                 </tr>
                 <tr>
                   <th scope="row">3.</th>
@@ -341,7 +335,7 @@
                     </p>
                   </td>
                   <td>b</td>
-                  <td></td>
+                  <td><span data-bind = "text:checkAnswer3"></span></td>
                 </tr>
                 <tr>
                   <th scope="row">4.</th>
@@ -354,7 +348,7 @@
                     </p>
                   </td>
                   <td>a</td>
-                  <td></td>
+                  <td><span data-bind = "text:checkAnswer4"></span></td>
                 </tr>
                 <tr>
                   <th scope="row">5.</th>
@@ -367,7 +361,7 @@
                     </p>
                   </td>
                   <td>a</td>
-                  <td></td>
+                  <td><span data-bind = "text:checkAnswer5"></span></td>
                 </tr>
                 <tr>
                   <th scope="row">6.</th>
@@ -378,7 +372,7 @@
                     </p>
                   </td>
                   <td>b</td>
-                  <td></td>
+                  <td><span data-bind = "text:checkAnswer6"></span></td>
                 </tr>
                 <tr>
                   <th scope="row">7.</th>
@@ -391,7 +385,7 @@
                     </p>
                   </td>
                   <td>b</td>
-                  <td></td>
+                  <td><span data-bind = "text:checkAnswer7"></span></td>
                 </tr>
                 <tr>
                   <th scope="row">8.</th>
@@ -404,7 +398,7 @@
                     </p>
                   </td>
                   <td>d</td>
-                  <td></td>
+                  <td><span data-bind = "text:checkAnswer8"></span></td>
                 </tr>
                 <tr>
                   <th scope="row">9.</th>
@@ -417,7 +411,7 @@
                     </p>
                   </td>
                   <td>c</td>
-                  <td></td>
+                  <td><span data-bind = "text:checkAnswer9"></span></td>
                 </tr>
                 <tr>
                   <th scope="row">10.</th>
@@ -428,7 +422,7 @@
                     </p>
                   </td>
                   <td>a</td>
-                  <td></td>
+                  <td><span data-bind = "text:checkAnswer10"></span></td>
                 </tr>
               </tbody>
           </table>
@@ -502,4 +496,21 @@
   </div>
 
   </body>
+  <script type = "text/javascript">
+    function ViewModel () {
+       checkAnswer1 =  ko.observable("No selection made");
+       checkAnswer2 =  ko.observable("No selection made");
+       checkAnswer3 =  ko.observable("No selection made");
+       checkAnswer4 =  ko.observable("No selection made");
+       checkAnswer5 =  ko.observable("No selection made");
+       checkAnswer6 =  ko.observable("No selection made");
+       checkAnswer7 =  ko.observable("No selection made");
+       checkAnswer8 =  ko.observable("No selection made");
+       checkAnswer9 =  ko.observable("No selection made");
+       checkAnswer10 =  ko.observable("No selection made");
+    };
+
+    var vm = new ViewModel();
+    ko.applyBindings(vm);
+ </script>
 </html>
