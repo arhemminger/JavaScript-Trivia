@@ -49,7 +49,7 @@
 
       <div id="start-quiz">
         <h2>Test Your Knowledge of JavaScript</h2>
-
+          <br>
           <div class="form-group">
             <label for="UserName"></label>
             <input type="text" class="form-control quiz-box" id="UserName" placeholder="Enter your name..">
@@ -286,7 +286,7 @@
 
     <div id="rank-container" id="Rank">
         <h2>Rank / Score</h2>
-
+        <h4 id="person"></h4>
         <div id="rank-box">
         <table class="table table-sm">
             <thead>
@@ -497,7 +497,7 @@
 
   </body>
   <script type = "text/javascript">
-    function ViewModel () {
+    function ViewModel () {     
        checkAnswer1 =  ko.observable("No selection made");
        checkAnswer2 =  ko.observable("No selection made");
        checkAnswer3 =  ko.observable("No selection made");

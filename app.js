@@ -57,6 +57,7 @@ function openHome() {
     document.getElementById('bio-container').style.display = "none";
     document.getElementById('title').style.display = "block";
 };
+
 // Quiz functions
 function openQuiz() {
     document.getElementById('quiz-container').style.display = "block";
@@ -66,9 +67,19 @@ function openQuiz() {
     document.getElementById('title').style.display = "none";
 };
 
+// Function to set username based off user entry. If no entry default to: User1
+function username() {
+    var name = document.getElementById('UserName').value;
+    if (name != "")
+    document.getElementById('person').innerHTML = "Name: " + name;
+    else 
+    document.getElementById('person').innerHTML = "Name: User1";
+}
+
 function startQuiz() {
     document.getElementById('q1').style.display = "block";
     document.getElementById('start-quiz').style.display = "none";
+    username();
 };
 
 function preQuest1() {
@@ -77,8 +88,8 @@ function preQuest1() {
 };
 
 function nextQuest1() {
-       document.getElementById('q2').style.display = "block";
-       document.getElementById('q1').style.display = "none";
+    document.getElementById('q2').style.display = "block";
+    document.getElementById('q1').style.display = "none";
 };
 
 function preQuest2() {
@@ -87,8 +98,8 @@ function preQuest2() {
 };
 
 function nextQuest2() {
-       document.getElementById('q3').style.display = "block";
-       document.getElementById('q2').style.display = "none";
+    document.getElementById('q3').style.display = "block";
+    document.getElementById('q2').style.display = "none";
 };
 
 function preQuest3() {
@@ -97,8 +108,8 @@ function preQuest3() {
 };
 
 function nextQuest3() {
-       document.getElementById('q4').style.display = "block";
-       document.getElementById('q3').style.display = "none";
+    document.getElementById('q4').style.display = "block";
+    document.getElementById('q3').style.display = "none";
 };
 
 function preQuest4() {
