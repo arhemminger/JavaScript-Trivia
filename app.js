@@ -168,26 +168,6 @@ function nextQuest10() {
     document.getElementById('Answers').style.display = "none";
 };
 
-/*
-function myRank() {
-    var score = 0;
-    if (score < 6) {
-        document.getElementById('rankDisplay').innerHTML = "Rank: Beginner";  //(Less than 6 correct answers)
-    }
-    if (score >= 6 && <= 8) {
-        document.getElementById('rankDisplay').innerHTML = "Rank: Novice";  //(6-8 correct answers)
-    }
-    if (score > 8) {
-        document.getElementById('rankDisplay').innerHTML = "Rank: Expert";  //(8-10 correct answers)
-    }
-    else {}
-};
-function myRank() {
-    //var score = 0;
-    var score = this.checkAnswer1();
-    document.getElementById('rankDisplay').innerHTML = "Rank: " + score;
-};
-*/
 // Rank functions
 function openRank() {
     document.getElementById('rank-container').style.display = "block";
@@ -195,43 +175,76 @@ function openRank() {
     document.getElementById('quiz-container').style.display = "none";
     document.getElementById('bio-container').style.display = "none";
     document.getElementById('title').style.display = "none";
-    // Score function
-    function myScore() {
-    var total = 0;
-    if (this.checkAnswer1() == "c") {
-        var total = total + 1;
-    }
-    if (this.checkAnswer2() == "c") {
-        var total = total + 1;
-    }
-    if (this.checkAnswer3() == "b") {
-        var total = total + 1;
-    }
-    if (this.checkAnswer4() == "a") {
-        var total = total + 1;
-    }
-    if (this.checkAnswer5() == "a") {
-        var total = total + 1;
-    }
-    if (this.checkAnswer6() == "b") {
-        var total = total + 1;
-    }
-    if (this.checkAnswer7() == "b") {
-        var total = total + 1;
-    }
-    if (this.checkAnswer8() == "d") {
-        var total = total + 1;
-    }
-    if (this.checkAnswer9() == "c") {
-        var total = total + 1;
-    }
-    if (this.checkAnswer10() == "a") {
-        var total = total + 1; 
-    }
-    var total = total * 10;
-    document.getElementById('scoreDisplay').innerHTML = "Score: " + total + "%";
+    // Score function: adds up total score and displays to scoreDisplay. Used != to handle "No selection made. Computes rank from score."
+    function myScoreRank() {
+        var total = 0;
+        if (this.checkAnswer1() != "c") {
+        }
+        else {
+            var total = total + 1;
+        }
+        if (this.checkAnswer2() != "c") {
+        }
+        else {
+            var total = total + 1;
+        }
+        if (this.checkAnswer3() != "b") {
+        }
+        else {
+            var total = total + 1;
+        }
+        if (this.checkAnswer4() != "a") {
+        }
+        else {
+            var total = total + 1;
+        }
+        if (this.checkAnswer5() != "a") {
+        }
+        else {
+            var total = total + 1;
+        }
+        if (this.checkAnswer6() != "b") {
+        }
+        else {
+            var total = total + 1;
+        }
+        if (this.checkAnswer7() != "b") {
+        }
+        else {
+            var total = total + 1;
+        }
+        if (this.checkAnswer8() != "d") {
+        }
+        else {
+            var total = total + 1;
+        }
+        if (this.checkAnswer9() != "c") {
+        }
+        else {
+            var total = total + 1;
+        }
+        if (this.checkAnswer10() != "a") {
+        }
+        else {
+            var total = total + 1;
+        }
+        var total = total * 10;
+        document.getElementById('scoreDisplay').innerHTML = "Score: " + total + "%";
+        
+        // compute ranking
+        var ranking = total / 10;
+        if (ranking < 6) {
+            document.getElementById('rankDisplay').innerHTML = "Rank: Beginner";  //(Less than 6 correct answers)
+        }
+        else if (ranking < 9 && ranking > 5) {
+            document.getElementById('rankDisplay').innerHTML = "Rank: Novice";  //(6-8 correct answers)
+        }
+        else if (ranking > 8) {
+            document.getElementById('rankDisplay').innerHTML = "Rank: Expert";  //(8-10 correct answers)
+        }
+        else {
+        document.getElementById('rankDisplay').innerHTML = "Rank: " + ranking;
+        }
     };
-    myScore();
-    myRank();
+    myScoreRank();
 };
-
