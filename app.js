@@ -63,7 +63,7 @@ function username() {
     var name = document.getElementById('UserName').value;
     if (name != "")
     document.getElementById('person').innerHTML = "Name: " + name;
-    else 
+    else
     document.getElementById('person').innerHTML = "Name: User1";
 }
 
@@ -163,10 +163,7 @@ function nextQuest9() {
     document.getElementById('q9').style.display = "none";
 };
 
-function nextQuest10() {
-    document.getElementById('q10').style.display = "block";
-    document.getElementById('Answers').style.display = "none";
-};
+
 
 // Rank functions
 function openRank() {
@@ -230,7 +227,7 @@ function openRank() {
         }
         var total = total * 10;
         document.getElementById('scoreDisplay').innerHTML = "Score: " + total + "%";
-        
+
         // compute ranking
         var ranking = total / 10;
         if (ranking < 6) {
